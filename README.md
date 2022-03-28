@@ -263,7 +263,10 @@ If you want to have two different vue applications running at the same time, you
 ```
 npm run serve -- --port 4000
 ```
-
+You can change the port of your back end by changing the app.listen line to use a different port.
+```
+app.listen(3000, () => console.log('Server listening on port 3000!'));
+```
 ## Testing
 
 Everything should be set up. You should be able to browse to your site, e.g
