@@ -247,6 +247,23 @@ forever stop 0
 
 to stop forever job number 0.
 
+## Killing Processes  
+If you get an EADDRINUSE error, it means that you have a process already connected to the port you are trying to use.  You can kill that process using:
+```
+ps -ax | grep node
+```
+to find the process that is running in background, then:
+```
+sudo kill 1254321
+```
+to kill process ID 1254321 that you should have seen in the first column of the output of ps
+
+## Running on a different port
+If you want to have two different vue applications running at the same time, you can run one of them on a different port using:
+```
+npm run serve -- --port 4000
+```
+
 ## Testing
 
 Everything should be set up. You should be able to browse to your site, e.g
